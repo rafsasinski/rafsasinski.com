@@ -2,17 +2,17 @@
   'use strict';
 
   global.document.addEventListener("mousemove", (e) => {
-    const element = global.document.querySelector("#site-logo");
-    let imagePos = calculateAxisFromElement(element);
-    let mousePosition = {x: e.clientX-imagePos.x, y: e.clientY-imagePos.y};
+    const imageLogoElement = global.document.querySelector("#site-logo");
+    let imageOrigin = getElementOrigin(imageLogoElement);
+    let mousePositionDelta = {x: e.clientX-imageOrigin.x, y: e.clientY-imageOrigin.y};
 
-    mousePosition.x = (mousePosition.x * -1)/50;
-    mousePosition.y = (mousePosition.y * -1)/50;
-    let blur = Math.round(10 + Math.abs(mousePosition.x));
-    element.style.filter = `drop-shadow(${mousePosition.x}px ${mousePosition.y}px ${blur}px var(--primary-orange))`;
+    mousePositionDelta.x = (mousePositionDelta.x * -1)/50;
+    mousePositionDelta.y = (mousePositionDelta.y * -1)/50;
+    let blur = Math.round(10 + Math.abs(mousePositionDelta.x));
+    imageLogoElement.style.filter = `drop-shadow(${mousePositionDelta.x}px ${mousePositionDelta.y}px ${blur}px var(--primary-orange))`;
   });
 
-  function calculateAxisFromElement(element) {
+  function getElementOrigin(element) {
     let offset = {x: Math.round(element.width/2), y: Math.round(element.height/2)};
 
     const rect = element.getBoundingClientRect();
@@ -22,4 +22,4 @@
 
     return {x, y}
   }
-}(window))
+}(window));
