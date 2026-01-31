@@ -22,4 +22,4 @@
 
     return {x, y}
   }
-}(window));
+}(window))
