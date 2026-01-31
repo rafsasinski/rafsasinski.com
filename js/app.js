@@ -22,4 +22,17 @@
 
     return {x, y}
   }
+
+  const surpriseMessage = global.document.querySelector("#surprise");
+  surpriseMessage.addEventListener("click", (evt) => {
+
+    if (surpriseMessage.getAttribute("href")?.startsWith("mailto:")) return;
+
+    evt.preventDefault();
+    const match = /(www\.)?(rafsasinski.com)/.exec(global.location.hostname)
+    const message = 'contact' + decodeURIComponent("%40") + match?.[2];
+    surpriseMessage.setAttribute("href", "mailto:" + message);
+    surpriseMessage.innerHTML = "<p>"+message+"</p>";
+  });
+
 }(window));
