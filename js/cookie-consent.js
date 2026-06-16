@@ -9,33 +9,41 @@
 
     evt.preventDefault();
     const match = /(www\.)?(rafsasinski.com)/.exec(global.location.hostname)
-    const message = 'contact' + decodeURIComponent("%40") + match?.[2];
+    const message = "contact" + decodeURIComponent("%40") + match?.[2];
     surpriseMessage.setAttribute("href", "mailto:" + message);
     surpriseMessage.innerHTML = "<p>" + message + "</p>";
   });
 
-  const dismissButton = global.document.querySelector("#dismiss-button");
-  dismissButton.addEventListener("click", (evt) => {
-    const analyticsBox = global.document.querySelector(".analytics-consent");
-    console.log("Reject Analytics");
-    dismissCookies();
-    // analyticsBox.style.display = "none";
-  });
-
   const allowButton = global.document.querySelector("#accept-button");
   allowButton.addEventListener("click", (evt) => {
-    console.log("Accept Analytics");
+    const inputCookieConsnet = global.document.querySelector("#cookie-consent");
+    console.log(`Cookies Settings: ${inputCookieConsnet.checked}`);
+
+    if (inputCookieConsnet.checked === true) {
+      writeConsentCookies('accepted');
+    } else {
+      writeConsentCookies('declined');
+    }
+
   });
 
-  function acceptCokkies() {
-
-  }
-
-  function dismissCookies() {
-    removeCookieConsentBanner();
-  }
-
   function removeCookieConsentBanner() {
-    cookieConsentWrapper.style.display = "none";
+    // cookieConsentWrapper.style.display = "none";
+    cookieConsentWrapper.classList.add("is-hiding");
+    cookieConsentWrapper.addEventListener("transitionend", (evt) => {
+      cookieConsentWrapper.style.display = "none";
+    }, { once: true} );
+  }
+
+  function readConsentCookies() {
+
+  }
+
+  function writeConsentCookies(mode) {
+    const expires = new Date(Date.now() + 30*24*60*60*1000).toUTCString();
+    const path = "/";
+    const ranalytics = {mode: mode, expires: expires};
+    global.document.cookie = `ranalytics=${JSON.stringify(ranalytics)}; expires=${expires}; path=${path}`;
+    removeCookieConsentBanner();
   }
 }(window));
