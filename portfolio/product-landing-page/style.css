@@ -1,0 +1,262 @@
+:root {
+  --color-black: #231f20ff;
+  --color-white: #fff;
+  --color-white-alpha: #ffffffAA;
+  --color-red: #e30c0c;
+  --color-working-area: black;
+  --color-silver: #717171;
+}
+body {
+  background-color: var(--color-black);
+  color: var(--color-white);
+  font-family: sans;
+  margin: 0;
+  text-align: center;
+}
+
+a {
+  color: initial;
+  text-decoration: none;
+}
+a:hover {
+  color: var(--color-red);
+}
+.white-link {
+  color: white;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+.section-header-2 {
+  margin: 4rem auto 2rem auto;
+}
+
+.section-paragraph {
+  margin: 3rem auto 3rem auto;
+}
+
+.make-it-red {
+  color: var(--color-red);
+}
+
+.main-wrapper {
+  background-color: var(--color-working-area);
+  overflow: hidden;
+}
+
+header {
+  align-items: center;
+  background-color: var(--color-white);
+  color: var(--color-black);
+  display: flex;
+  flex-direction: row;
+  height: 90px;
+  justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+.fuji-logo {
+  height: 80px;
+  margin-left: 5px;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 90%;
+}
+
+main {
+  margin-top: 90px;
+}
+
+#section-01, #section-02, #section-03 {
+  height: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+#section-01{
+  background-attachment: fixed;
+  background-image: url("https://spharce-front.s3-us-west-2.amazonaws.com/freecodecamp/Responsive+Web+Design+Certification/Product+Landing+Page/img/background-train.jpeg");
+  background-size: cover;
+  color: var(--color-black);
+}
+#section-02 {
+  background-color: var(--color-black);
+  color: var(--color-white);
+}
+#section-03 {
+  background-color: var(--color-white);
+  color: var(--color-black);
+}
+
+.welcome-section {
+  background-color: var(--color-white-alpha);
+  backdrop-filter: blur(5px);
+  height: 80vh;
+  position: relative;
+}
+
+.welcome-section > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+
+#welcome-image {
+  max-width: 25em;
+  min-width: 10em;
+  position: relative;
+  width: 100%;
+}
+#welcome-image:hover {
+  animation-name: fuji-leviosa;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+}
+@keyframes fuji-leviosa {
+  0% {
+    top: 0;
+  }
+  50% {
+    top: -30px;
+  }
+  100% {
+    top: 0;
+  }
+}
+
+#welcome-container-01, #welcome-container-02, #welcome-container-03 {
+  align-items: center;
+  box-sizing: border-box;
+  display: flex;
+  font-size: 2rem;
+}
+#welcome-container-03 > div {
+  width: 400px;
+}
+#welcome-container-03 > div > div {
+  text-align: center;
+}
+
+.red-vertical-separator {
+  background: linear-gradient(0deg,maroon,var(--color-red));
+  height: 75%;
+  width: 6px;
+}
+
+.red-horizontal-separator {
+  background: linear-gradient(90deg,maroon,var(--color-red));
+  height: 6px;
+  margin: 5rem auto;
+  width: 25%;
+}
+
+#yt-container {
+  padding: 2rem 0 3rem 0;
+}
+
+#spec-table {
+  font-size: 1.8rem;
+  margin: 2rem auto 5rem auto;
+  text-align: left;
+}
+
+.spec-icon {
+  height: 80px;
+  margin-right: 10px;
+  width: auto;
+}
+
+footer {
+  align-items: center;
+  background-color: var(--color-black);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  overflow: hidden;
+  padding: 20px 0;
+}
+
+#newsletter-section
+{
+  padding-bottom: 4rem;
+}
+
+#submit {
+  background-color: var(--color-white);
+  border: 2px solid var(--color-silver);
+  border-radius: 5px;
+  margin-top: 1rem;
+  outline: none;
+  padding: 5px;
+}
+#submit:hover {
+  border-color: var(--color-red);
+}
+#submit:focus {
+  border-color: var(--color-red);
+}
+
+#email {
+  box-sizing: border-box;
+  border: 2px solid var(--color-silver);
+  border-radius: 5px;
+  outline: none;
+  padding: 5px;
+}
+#email:focus {
+  border: 2px solid var(--color-red);
+}
+
+#goodbye-image {
+  max-width: 1000px;
+  width: 100%;
+}
+
+.section-anchor {
+  background-color: red;
+  height: 80px;
+  position: absolute;
+  top: -80px;
+  visibility: hidden;
+  width: 100%;
+}
+
+@media  (max-width: 700px) {
+  .welcome-section > div {
+    flex-direction: column;
+  }
+  #welcome-container-02 {
+    display: none;
+  }
+  #welcome-container-03 > div {
+    width: 100%;
+  }
+
+  #section-02, #section-03 {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  footer {
+    flex-direction: column;
+  }
+
+  iframe {
+    width: 100%;
+  }
+
+}
