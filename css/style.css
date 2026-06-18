@@ -1,3 +1,4 @@
+/* ##### Fonts & Tokens ##### */
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 
 :root {
@@ -12,6 +13,7 @@
   --glow: rgba(248, 178, 24, 0.45);
 }
 
+/* ########## SECTION START: Base / Reset ########## */
 html, body {
   /*background-color: #0c4b85;*/
   background: linear-gradient(to bottom, #03325f, #01172c);
@@ -29,17 +31,9 @@ img {
   pointer-events: none;
 }
 
-
-nav {
-  align-items: center;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-  justify-content: flex-end;
-  margin-right: 2rem;
-  width: 90%;
+h1 {
+  margin: 50px auto;
 }
-
 
 a {
   color: var(--primary-white);
@@ -50,29 +44,7 @@ a:hover {
   color: var(--primary-orange);
 }
 
-h1 {
-  margin: 50px auto;
-}
-
-#site-logo {
-  filter: drop-shadow(0px 0px 5px var(--primary-orange));
-  margin: auto;
-  max-height: 128px;
-  max-width: 320px;
-  width: 40%;
-  -webkit-filter: drop-shadow(0px 0px 5px var(--primary-orange));
-}
-
-.profile-picture {
-  aspect-ratio: 1;
-  border: 5px solid var(--primary-orange);
-  border-radius: 50%;
-  margin: auto 0;
-  width: 35vw;
-  height: auto;
-  max-width: 400px;
-}
-
+/* ########## SECTION START: Layout ##########  */
 .wrapper {
   margin: auto 0;
 }
@@ -85,6 +57,7 @@ h1 {
   margin: 8rem auto;
 }
 
+/* ########## SECTION START: Header & Brand ########## */
 header {
   display: flex;
   flex-direction: row;
@@ -104,6 +77,15 @@ header {
   margin: auto 0;
 }
 
+#site-logo {
+  filter: drop-shadow(0px 0px 5px var(--primary-orange));
+  margin: auto;
+  max-height: 128px;
+  max-width: 320px;
+  width: 40%;
+  -webkit-filter: drop-shadow(0px 0px 5px var(--primary-orange));
+}
+
 .logo-name {
   font-size: 1.5rem;
   margin: auto 2rem;
@@ -120,6 +102,7 @@ header {
   margin: auto 0;
 }
 
+/* ########## SECTION START: Hero / Welcome ########## */
 .welcome-msg {
   margin: auto 2rem;
   text-align: left;
@@ -151,6 +134,13 @@ header {
   justify-content: flex-start;
 }
 
+.tagline {
+  font-size: 1rem;
+  color: var(--muted-white);
+  margin: 0.5rem auto 0;
+  font-weight: 300;
+}
+
 .separator {
   background: var(--primary-orange);
   margin: 1rem 0;
@@ -158,11 +148,25 @@ header {
   width: 25%;
 }
 
-.tagline {
-  font-size: 1rem;
-  color: var(--muted-white);
-  margin: 0.5rem auto 0;
-  font-weight: 300;
+.profile-picture {
+  aspect-ratio: 1;
+  border: 5px solid var(--primary-orange);
+  border-radius: 50%;
+  margin: auto 0;
+  width: 35vw;
+  height: auto;
+  max-width: 400px;
+}
+
+/* ########## SECTION START: Components ########## */
+nav {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: flex-end;
+  margin-right: 2rem;
+  width: 90%;
 }
 
 .nav-cta p {
@@ -180,7 +184,7 @@ header {
   box-shadow: 0 0 18px var(--glow);
 }
 
-
+/* ########## SECTION START: Responsive ########## */
 @media (max-width: 830px) {
   .profile-picture {
     height: 25%;
@@ -248,4 +252,3 @@ header {
     width: 100%;
   }
 }
-
