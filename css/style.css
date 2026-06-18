@@ -70,7 +70,7 @@ header {
 
 .brand {
   display: flex;
-  margin: 0;
+  margin: auto 0;
 }
 
 .logo {
@@ -86,20 +86,16 @@ header {
   -webkit-filter: drop-shadow(0px 0px 5px var(--primary-orange));
 }
 
-.logo-name {
+.brand-name {
   font-size: 1.5rem;
-  margin: auto 2rem;
+  margin: auto 0;
   text-wrap: nowrap;
 }
 
-.logo-name h1 {
+.brand-name h1 {
   font-size: 1.5rem;
   font-weight: 500;
   margin: 0;
-}
-
-.brand .logo-name {
-  margin: auto 0;
 }
 
 /* ########## SECTION START: Hero / Welcome ########## */
@@ -217,7 +213,7 @@ nav {
     max-height: 68px;
   }
 
-  .logo-name h1 {
+  .brand-name h1 {
     font-size: 1.6rem;
   }
 
