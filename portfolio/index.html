@@ -13,11 +13,19 @@
   <link rel="manifest" href="site.webmanifest">
   <meta name="theme-color" content="#0c4b85">
   <script>
-    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-59X53L9N');
+    (function (w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true;
+      j.src =
+        'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-59X53L9N');
   </script>
 </head>
 
@@ -29,26 +37,38 @@
 <!-- Add your site or application content here -->
 <div class="wrapper">
   <header>
+    <div>
+      <div class="logo">
+        <a href="../">
+          <img src="../img/Spharce_Bubbles_Logo_White.png" id="site-logo" alt="White bubbles forming a circular ring"/>
+        </a>
+      </div>
+      <div class="logo-name">
+        <a href="../"><h1>Raf Sasinski</h1></a>
+      </div>
+    </div>
+    <nav>
+      <a href="https://www.linkedin.com/in/rafsasinski/" target="_blank"><p>LinkedIn</p></a>
+      <a href="https://github.com/rafsasinski/" target="_blank"><p>GitHub</p></a>
+      <a href="https://medium.com/@rafsasinski" target="_blank"><p>Medium</p></a>
+      <a href="https://www.instagram.com/rafsasinski/" target="_blank"><p>Instagram</p></a>
+    </nav>
+  </header>
+  <div class="content">
+    <section class="hero">
+      <div class="welcome-msg">
+        <p class="hi">Work in progress.</p>
+        <p class="hi">More content is coming soon.</p>
+        <div class="separator"></div>
+        <h2>Selected Work:</h2>
+        <nav>
+          <a class="nav-cta" href="./product-landing-page/index.html" target="_blank"><p>Product page -Fujilm</p></a>
+          <a id="surprise"><p>Email (click to see)</p></a>
+        </nav>
+      </div>
+    </section>
 
-  </header>
-  <header>
-    <div class="logo">
-      <img src="../img/Spharce_Bubbles_Logo_White.png" id="site-logo" alt="White bubbles forming a circular ring"/>
-    </div>
-    <div class="logo-name">
-      <h1>Raf Sasinski</h1>
-      <p class="tagline">Engineer and designer. I write the code and draw the pixels.</p>
-    </div>
-  </header>
-  <nav>
-    <a class="nav-cta" href="../"><p>Home</p></a>
-    <a class="nav-cta" href="./product-landing-page" target="_blank" rel="noopener noreferrer"><p>Product Landing Page</p></a>
-    <a href="https://www.linkedin.com/in/rafsasinski/" target="_blank"><p>LinkedIn</p></a>
-    <a href="https://github.com/rafsasinski/" target="_blank"><p>GitHub</p></a>
-    <a href="https://medium.com/@rafsasinski" target="_blank"><p>Medium</p></a>
-    <a href="https://www.instagram.com/rafsasinski/" target="_blank"><p>Instagram</p></a>
-    <a id="surprise"><p>Email (click to see)</p></a>
-  </nav>
+  </div>
 </div>
 <script src="../js/app.js"></script>
 

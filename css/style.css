@@ -5,8 +5,8 @@
   --muted-white: rgba(255, 255, 255, 0.55);
   --primary-orange: #f8b218ff;
   --primary-green: #31f818;
-  --blue-top: #0C4B85;
-  --blue-bottom: #072f54;
+  --blue-top: #03325f;
+  --blue-bottom: #01294e;
   --card-bg: rgba(255, 255, 255, 0.04);
   --card-border: rgba(255, 255, 255, 0.10);
   --glow: rgba(248, 178, 24, 0.45);
@@ -14,7 +14,7 @@
 
 html, body {
   /*background-color: #0c4b85;*/
-  background: linear-gradient(to bottom, #0C4B85FF, #072f54);
+  background: linear-gradient(to bottom, #03325f, #01172c);
   color: var(--primary-white);
   height: 100vh;
   margin: 0;
@@ -25,14 +25,18 @@ html, body {
   text-align: center;
 }
 
+img {
+  pointer-events: none;
+}
+
+
 nav {
   align-items: center;
   display: flex;
-  font-size: 1.25rem;
   flex-wrap: wrap;
   gap: 1.5rem;
-  justify-content: center;
-  margin-top: 1rem;
+  justify-content: flex-end;
+  margin-right: 2rem;
   width: 90%;
 }
 
@@ -58,30 +62,116 @@ h1 {
   filter: drop-shadow(0px 0px 5px var(--primary-orange));
 }
 
+.profile-picutre {
+  aspect-ratio: 1;
+  border: 5px solid var(--primary-orange);
+  border-radius: 50%;
+  margin: auto 0;
+  width: 35vw;
+  height: auto;
+  max-width: 400px;
+}
+
 .wrapper {
-  margin: auto 1rem;
+  margin: auto 0;
+}
+
+.home {
   display: flex;
   height: 100%;
   flex-direction: column;
   justify-content: center; /* vertical centering (because column) */
   align-items: center; /* horizontal centering */
   gap: 1rem;
+  margin: auto 1rem;
+}
+
+.hero {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  justify-content: center;
+  margin: 8rem auto;
 }
 
 header {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 0.5rem;
+  margin: 0 0 1rem;
+  border-bottom: solid 1px var(--primary-orange);
+  padding: 1rem 0 1rem;
+  background-color: rgb(0 0 0 / 0.27);
+}
+
+header div {
+  display: flex;
+  margin: 0;
+}
+
+header .logo #site-logo {
+  max-height: 128px;
+}
+
+.logo a {
+  margin: auto 0;
 }
 
 .logo-name {
   font-size: 1.5rem;
   margin: auto 2rem;
+  text-wrap: nowrap;
 }
 
 .logo-name h1 {
   margin: 30px auto 0;
   font-weight: 500;
+}
+
+header div .logo-name {
+  margin: auto 0;
+}
+
+header .logo-name h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.welcome-msg {
+  margin: auto 2rem;
+  text-align: left;
+  text-wrap: nowrap;
+}
+
+.welcome-msg .hi {
+  font-size: 2rem;
+}
+
+.welcome-msg p {
+  color: var(--muted-white);
+}
+
+.welcome-msg h1 {
+  font-size: 5rem;
+  font-weight: 600;
+  margin: 2rem auto 2rem;
+}
+
+.welcome-msg h2 {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: var(--muted-white);
+}
+
+.welcome-msg nav {
+  justify-content: flex-start;
+}
+
+.separator {
+  background: var(--primary-orange);
+  margin: 1rem 0;
+  height: 2px;
+  width: 25%;
 }
 
 .tagline {
@@ -99,6 +189,7 @@ header {
   margin: 0;
   transition: all 0.25s ease;
 }
+
 .nav-cta:hover p {
   background: var(--primary-orange);
   color: var(--blue-bottom);
@@ -106,18 +197,71 @@ header {
 }
 
 
+@media (max-width: 830px) {
+  .profile-picutre {
+    height: 25%;
+    width: 25%;
+  }
+}
+
 @media (max-width: 768px) {
   nav {
-    flex-direction: column;
     align-items: center;
+    flex-direction: column;
     gap: 0.1rem;
+    margin: 1rem auto;
+    width: 100%;
   }
 
   p {
     margin: 0.3rem auto;
   }
 
+  header {
+    flex-direction: column;
+  }
+
+  header div {
+    justify-content: center;
+  }
+
+  header .logo #site-logo {
+    max-height: 68px;
+  }
+
+  .logo-name a h1 {
+    font-size: 1.6rem;
+  }
+
   .wrapper {
     height: 80%;
   }
+
+  .hero {
+    align-items: center;
+    flex-direction: column-reverse;
+    margin: 2rem auto;
+  }
+
+  .hero .welcome-msg {
+    text-align: center;
+  }
+
+  .hero .welcome-msg h1 {
+    font-size: 3rem;
+    margin: 1rem  auto;
+  }
+
+  .hero .welcome-msg h2 {
+    font-size: 1rem;
+  }
+
+  .hero .welcome-msg p {
+    font-size: 1rem;
+  }
+
+  .separator {
+    width: 100%;
+  }
 }
+
