@@ -94,7 +94,7 @@ header {
 .brand-name {
   font-size: 1.5rem;
   margin: auto 0;
-  /*text-wrap: nowrap;*/
+  text-wrap: nowrap;
 }
 
 .brand-name h1 {
