@@ -6,3 +6,10 @@ dist
 .cache
 
 .idea/
+
+# Ignore vim files:
+*~
+*.swp
+*.swo
+
+*.zip
