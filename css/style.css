@@ -55,11 +55,12 @@ h1 {
 }
 
 #site-logo {
-  width: 40%;
-  margin: auto;
-  max-width: 320px;
-  -webkit-filter: drop-shadow(0px 0px 5px var(--primary-orange));
   filter: drop-shadow(0px 0px 5px var(--primary-orange));
+  margin: auto;
+  max-height: 128px;
+  max-width: 320px;
+  width: 40%;
+  -webkit-filter: drop-shadow(0px 0px 5px var(--primary-orange));
 }
 
 .profile-picture {
@@ -74,16 +75,6 @@ h1 {
 
 .wrapper {
   margin: auto 0;
-}
-
-.home {
-  display: flex;
-  height: 100%;
-  flex-direction: column;
-  justify-content: center; /* vertical centering (because column) */
-  align-items: center; /* horizontal centering */
-  gap: 1rem;
-  margin: auto 1rem;
 }
 
 .hero {
@@ -104,16 +95,12 @@ header {
   background-color: rgb(0 0 0 / 0.27);
 }
 
-header div {
+.brand {
   display: flex;
   margin: 0;
 }
 
-header .logo #site-logo {
-  max-height: 128px;
-}
-
-.logo a {
+.logo {
   margin: auto 0;
 }
 
@@ -124,17 +111,13 @@ header .logo #site-logo {
 }
 
 .logo-name h1 {
-  margin: 30px auto 0;
-  font-weight: 500;
-}
-
-header div .logo-name {
-  margin: auto 0;
-}
-
-header .logo-name h1 {
-  margin: 0;
   font-size: 1.5rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+.brand .logo-name {
+  margin: auto 0;
 }
 
 .welcome-msg {
@@ -143,12 +126,13 @@ header .logo-name h1 {
   text-wrap: nowrap;
 }
 
-.welcome-msg .hi {
+.welcome-msg p {
+  color: var(--muted-white);
   font-size: 2rem;
 }
 
-.welcome-msg p {
-  color: var(--muted-white);
+.welcome-msg a p {
+  font-size: 1rem;
 }
 
 .welcome-msg h1 {
@@ -221,15 +205,15 @@ header .logo-name h1 {
     flex-direction: column;
   }
 
-  header div {
+  .brand {
     justify-content: center;
   }
 
-  header .logo #site-logo {
+  #site-logo {
     max-height: 68px;
   }
 
-  .logo-name a h1 {
+  .logo-name h1 {
     font-size: 1.6rem;
   }
 
@@ -243,20 +227,20 @@ header .logo-name h1 {
     margin: 2rem auto;
   }
 
-  .hero .welcome-msg {
+  .welcome-msg {
     text-align: center;
   }
 
-  .hero .welcome-msg h1 {
+  .welcome-msg h1 {
     font-size: 3rem;
-    margin: 1rem  auto;
+    margin: 1rem auto;
   }
 
-  .hero .welcome-msg h2 {
+  .welcome-msg h2 {
     font-size: 1rem;
   }
 
-  .hero .welcome-msg p {
+  .welcome-msg p {
     font-size: 1rem;
   }
 
