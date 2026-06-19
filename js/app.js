@@ -37,7 +37,7 @@
       const match = /(www\.)?(rafsasinski.com)/.exec(global.location.hostname)
       const message = 'contact' + decodeURIComponent("%40") + match?.[2];
       element.setAttribute("href", "mailto:" + message);
-      element.innerHTML = "<p>" + message + "</p>";
+      element.innerText = message;
     });
   }
 
