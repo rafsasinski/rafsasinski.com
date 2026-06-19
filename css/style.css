@@ -19,8 +19,21 @@ html {
   background: #01172c;
 }
 body {
-  /*background-color: #0c4b85;*/
-  background: linear-gradient(to bottom, #03325f, #01172c);
+  background:
+    radial-gradient(circle at 12% 18%, rgba(255, 255, 255, 0.08) 0 2px, transparent 3px),
+    radial-gradient(circle at 78% 22%, rgba(248, 178, 24, 0.10) 0 5px, transparent 6px),
+    radial-gradient(circle at 34% 72%, rgba(255, 255, 255, 0.06) 0 9px, transparent 10px),
+    radial-gradient(circle at 88% 78%, rgba(255, 255, 255, 0.05) 0 14px, transparent 15px),
+    radial-gradient(circle at 52% 38%, rgba(248, 178, 24, 0.08) 0 4px, transparent 5px),
+
+    repeating-linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.03) 0 1px,
+      transparent 1px 14px
+    ),
+
+    linear-gradient(to bottom, #03325f, #01172c);
+
   color: var(--primary-white);
   min-height: 100svh;
   margin: 0;
@@ -30,7 +43,6 @@ body {
   font-weight: 300;
   text-align: center;
 }
-
 img {
   pointer-events: none;
 }
@@ -50,6 +62,8 @@ a:hover {
 
 /* ########## SECTION START: Layout ##########  */
 .wrapper {
+  display: flex;
+  flex-direction: column;
   min-height: 100svh;
   height: auto;
 }
@@ -101,6 +115,19 @@ header {
   font-size: 1.5rem;
   font-weight: 500;
   margin: 0;
+}
+
+.content {
+  margin: auto;
+}
+
+footer {
+  border-top: solid 1px var(--glow);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: auto;
+  padding: 0 2rem;
 }
 
 /* ########## SECTION START: Hero / Welcome ########## */
@@ -157,7 +184,7 @@ header {
   aspect-ratio: 1;
   border: 5px solid var(--primary-orange);
   border-radius: 50%;
-  margin: auto 0;
+  margin: auto 2rem;
   width: 35vw;
   height: auto;
   max-width: 400px;
