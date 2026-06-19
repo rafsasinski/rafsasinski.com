@@ -18,6 +18,7 @@ html {
   min-height: 100%;
   background: #01172c;
 }
+
 body {
   background:
     radial-gradient(circle at 12% 18%, rgba(255, 255, 255, 0.08) 0 2px, transparent 3px),
@@ -43,12 +44,28 @@ body {
   font-weight: 300;
   text-align: center;
 }
+
 img {
   pointer-events: none;
 }
 
 h1 {
-  margin: 50px auto;
+  /*margin: 50px auto;*/
+    font-size: 5rem;
+    font-weight: 600;
+    margin: 2rem auto 2rem;
+}
+
+h2 {
+  color: var(--muted-white);
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin: 0.5rem auto 0;
+}
+
+p {
+  color: var(--muted-white);
+  font-size: 1rem;
 }
 
 a {
@@ -58,6 +75,10 @@ a {
 
 a:hover {
   color: var(--primary-orange);
+}
+
+a > p {
+  color: var(--primary-white);
 }
 
 /* ########## SECTION START: Layout ##########  */
@@ -73,7 +94,7 @@ a:hover {
   flex-direction: row;
   gap: 0.5rem;
   justify-content: center;
-  margin: 8rem auto;
+  margin: 8rem 4rem;
 }
 
 /* ########## SECTION START: Header & Brand ########## */
@@ -137,40 +158,16 @@ footer {
   /*text-wrap: nowrap;*/
 }
 
-.welcome-msg p {
-  color: var(--muted-white);
-  font-size: 1rem;
-}
-
-.welcome-msg p.large-p {
-  font-size: 1.8rem;
-}
-
-.welcome-msg a p {
-  font-size: 1rem;
-}
-
-.welcome-msg h1 {
-  font-size: 5rem;
-  font-weight: 600;
-  margin: 2rem auto 2rem;
-}
-
-.welcome-msg h2 {
+.lead-text{
   font-size: 1.5rem;
-  font-weight: 300;
-  color: var(--muted-white);
+}
+
+.orange-text {
+  color: var(--primary-orange);
 }
 
 .welcome-msg nav {
   justify-content: flex-start;
-}
-
-.tagline {
-  font-size: 1rem;
-  color: var(--muted-white);
-  margin: 0.5rem auto 0;
-  font-weight: 300;
 }
 
 .separator {
@@ -201,7 +198,7 @@ nav {
   width: 90%;
 }
 
-.nav-cta p {
+.nav-cta {
   border: 1px solid var(--primary-orange);
   color: var(--primary-orange);
   padding: 0.4rem 1.2rem;
@@ -210,14 +207,19 @@ nav {
   transition: all 0.25s ease;
 }
 
-.nav-cta--ghost p {
+.nav-cta--ghost {
   border: none;
 }
 
-.nav-cta:hover p {
+.nav-cta:hover {
   background: var(--primary-orange);
   color: var(--blue-bottom);
   box-shadow: 0 0 18px var(--glow);
+}
+
+.link-cta {
+  border-bottom: 1px dotted var(--primary-orange);
+  padding: 0.4rem 0;
 }
 
 /* ########## SECTION START: Responsive ########## */
@@ -237,8 +239,10 @@ nav {
     width: 100%;
   }
 
-  p {
-    margin: 0.3rem auto;
+  .welcome-msg nav {
+    align-content: flex-start;
+    gap: 1.5rem;
+    padding-top: 1rem;
   }
 
   header {
@@ -272,16 +276,17 @@ nav {
     text-wrap: wrap;
   }
 
-  .welcome-msg h1 {
+  h1 {
     font-size: 3rem;
     margin: 1rem auto;
   }
 
-  .welcome-msg h2 {
+  h2 {
     font-size: 1.5rem;
   }
 
-  .welcome-msg p {
+  p {
+    margin: 0.3rem auto;
     font-size: 1rem;
     line-height: 1.5;
   }
