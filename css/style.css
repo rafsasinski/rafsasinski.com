@@ -7,7 +7,7 @@
   --primary-orange: #f8b218ff;
   --primary-green: #31f818;
   --blue-top: #03325f;
-  --blue-bottom: #01294e;
+  --blue-bottom: #01172c;
   --card-bg: rgba(255, 255, 255, 0.04);
   --card-border: rgba(255, 255, 255, 0.10);
   --glow: rgba(248, 178, 24, 0.45);
@@ -34,7 +34,7 @@ body {
       transparent 1px 14px
     ),
 
-    linear-gradient(to bottom, #03325f, #01172c);
+    linear-gradient(to bottom, #032c54ff, #001023);
 
   color: var(--primary-white);
   min-height: 100svh;
@@ -60,6 +60,13 @@ h1 {
 }
 
 h2 {
+  color: var(--muted-white);
+  font-size: 3rem;
+  font-weight: 300;
+  margin: 0.5rem auto 0;
+}
+
+h3 {
   color: var(--muted-white);
   font-size: 1.5rem;
   font-weight: 300;
@@ -88,8 +95,10 @@ ul {
   list-style-type: none;
   /* NEW class? */
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
+  gap: 1rem 0;
+  padding: 1rem;
 }
 
 li {
@@ -100,7 +109,7 @@ li {
 /*  content: "|";*/
 /*}*/
 
-li + li {
+ li + .skills-item{
   border-left: 1px solid var(--primary-orange);
   padding-left: 1rem;
 }
@@ -132,10 +141,34 @@ section {
 
 .box {
   background: var(--card-bg);
-  border: 2px solid var(--card-border);
+  border: 1px solid var(--card-border);
   border-radius: 1rem;
-  margin: 1rem;
+  margin: auto;
 }
+
+.skills-icon {
+  height: 32px;
+}
+
+.skills-item{
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.skills-break {
+  display: none;
+  flex-basis: 100%;
+  height: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/*.hidden {*/
+/*  display: none;*/
+/*}*/
+
 /* ########## END: Layout ##########  */
 
 /* ########## START: Header & Brand ########## */
@@ -264,6 +297,18 @@ footer {
 /* ########## END: Footer ########## */
 
 /* ########## START: Responsive ########## */
+@media (max-width: 1250px) {
+  .skills-break {
+    display: list-item;
+  }
+  li + .skills-item{
+    border: none;
+  }
+  .skills-item+ li {
+    border-left: 1px solid var(--primary-orange);
+    padding-left: 1rem;
+  }
+}
 @media (max-width: 830px) {
   .profile-picture {
     height: 25%;
@@ -326,7 +371,7 @@ footer {
   }
 
   h2 {
-    font-size: 1.5rem;
+    font-size: 2.3rem;
   }
 
   p {
@@ -341,6 +386,7 @@ footer {
 
   ul {
     flex-direction: column;
+    font-size: 1.5rem;
     padding: 0;
   }
 
@@ -352,12 +398,12 @@ footer {
   /*  content: "|";*/
   /*}*/
 
-  li + li {
-    /* clean the left border */
+  li + .skills-item{
     border-left: none;
     padding-left: 0;
-
     border-top: 1px solid var(--primary-orange);
+    border-image:
+     linear-gradient(to right, var(--primary-orange), transparent) 1;
     padding-top: 1rem;
   }
 }
