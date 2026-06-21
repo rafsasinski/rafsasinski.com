@@ -452,6 +452,10 @@ footer {
     padding-top: 1rem;
   }
 
+  .skills-break {
+    display: none;
+  }
+
   .box-image {
     box-sizing: border-box;
     width: 100%;
