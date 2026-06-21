@@ -35,7 +35,7 @@ body {
       transparent 1px 14px
     ),
 
-    linear-gradient(to bottom, #032c54ff, #001023);
+    linear-gradient(to bottom, #011226, #001023);
 
   color: var(--primary-white);
   min-height: 100svh;
@@ -142,24 +142,38 @@ section {
   margin: 4rem 4rem;
 }
 
+.portfolio-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
 .box {
   background: var(--card-bg);
   border: 1px solid var(--card-border);
   border-radius: 1rem;
   margin: auto;
+  transition: border-color 0.5s ease, box-shadow 0.5s ease;
+}
+.box:hover {
+  border: 1px solid var(--primary-orange);
+  box-shadow: 0 0 18px var(--glow);
 }
 
-.tight {
-  width: auto;
-  max-width: 27rem;
+.box--padding {
   padding: 2rem;
 }
 
 .box-image {
   width: 25rem;
   border-radius: 1rem;
-  border: 2px solid var(--primary-orange);
+  border: 1px solid var(--primary-orange);
   margin: auto;
+}
+
+.box-text {
+  text-align: left;
+  width: 25rem;
 }
 
 .skills-icon {
@@ -298,7 +312,9 @@ nav {
 }
 
 .long-cta {
+  box-sizing: border-box;
   display: inline-block;
+  width: 100%;
 }
 
 .link-cta {
@@ -306,6 +322,10 @@ nav {
   padding: 0.4rem 0;
 }
 
+.cta--right {
+  box-sizing: border-box;
+  float: right;
+}
 /* ########## END: Components ########## */
 
 /* ########## START: Footer ########## */
@@ -433,10 +453,15 @@ footer {
   }
 
   .box-image {
-    width: 18rem;
+    box-sizing: border-box;
+    width: 100%;
     border-radius: 1rem;
     border: 2px solid var(--primary-orange);
     margin: auto;
+  }
+
+  .box-text {
+    width: 100%;
   }
 }
 
