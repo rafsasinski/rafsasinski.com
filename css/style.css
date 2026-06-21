@@ -12,6 +12,7 @@
   --card-border: rgba(255, 255, 255, 0.10);
   --glow: rgba(248, 178, 24, 0.45);
 }
+
 /* ########## END: Fonts & Tokens ########## */
 
 /* ########## START: Base / Reset ########## */
@@ -34,7 +35,7 @@ body {
       transparent 1px 14px
     ),
 
-    linear-gradient(to bottom, #011226, #001023);
+    linear-gradient(to bottom, #032c54ff, #001023);
 
   color: var(--primary-white);
   min-height: 100svh;
@@ -49,14 +50,15 @@ body {
 img {
   pointer-events: none;
 }
+
 /* ########## END: Base / Reset ########## */
 
 /* ########## START: Typography / Text ##########  */
 h1 {
   /*margin: 50px auto;*/
-    font-size: 6rem;
-    font-weight: 600;
-    margin: 2rem auto 2rem;
+  font-size: 6rem;
+  font-weight: 600;
+  margin: 2rem auto 2rem;
 }
 
 h2 {
@@ -109,18 +111,19 @@ li {
 /*  content: "|";*/
 /*}*/
 
- li + .skills-item{
+li + .skills-item {
   border-left: 1px solid var(--primary-orange);
   padding-left: 1rem;
 }
 
-.lead-text{
+.lead-text {
   font-size: 1.5rem;
 }
 
 .orange-text {
   color: var(--primary-orange);
 }
+
 /* ########## END: Typography / Text ##########  */
 
 /* ########## START: Layout ##########  */
@@ -150,7 +153,7 @@ section {
   height: 32px;
 }
 
-.skills-item{
+.skills-item {
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -211,6 +214,7 @@ header {
   font-weight: 500;
   margin: 0;
 }
+
 /* ########## END: Header & Brand ########## */
 
 /* ########## START: Hero / Welcome ########## */
@@ -247,6 +251,7 @@ header {
   height: auto;
   max-width: 400px;
 }
+
 /* ########## END: Hero / Welcome ########## */
 
 /* ########## START: Components ########## */
@@ -283,6 +288,7 @@ nav {
   border-bottom: 1px dotted var(--primary-orange);
   padding: 0.4rem 0;
 }
+
 /* ########## END: Components ########## */
 
 /* ########## START: Footer ########## */
@@ -294,6 +300,7 @@ footer {
   margin-top: auto;
   padding: 0 2rem;
 }
+
 /* ########## END: Footer ########## */
 
 /* ########## START: Responsive ########## */
@@ -301,14 +308,17 @@ footer {
   .skills-break {
     display: list-item;
   }
-  li + .skills-item{
+
+  li + .skills-item {
     border: none;
   }
-  .skills-item+ li {
+
+  .skills-item + li {
     border-left: 1px solid var(--primary-orange);
     padding-left: 1rem;
   }
 }
+
 @media (max-width: 830px) {
   .profile-picture {
     height: 25%;
@@ -397,16 +407,15 @@ footer {
   /*li:after {*/
   /*  content: "|";*/
   /*}*/
-
-  li + .skills-item{
+  li + .skills-item {
     border-left: none;
     padding-left: 0;
     border-top: 1px solid var(--primary-orange);
-    border-image:
-     linear-gradient(to right, var(--primary-orange), transparent) 1;
+    border-image: linear-gradient(to right, var(--primary-orange), transparent) 1;
     padding-top: 1rem;
   }
 }
+
 /* ########## END: Responsive ########## */
 
 /*
