@@ -149,6 +149,19 @@ section {
   margin: auto;
 }
 
+.tight {
+  width: auto;
+  max-width: 27rem;
+  padding: 2rem;
+}
+
+.box-image {
+  width: 25rem;
+  border-radius: 1rem;
+  border: 2px solid var(--primary-orange);
+  margin: auto;
+}
+
 .skills-icon {
   height: 32px;
 }
@@ -284,6 +297,10 @@ nav {
   box-shadow: 0 0 18px var(--glow);
 }
 
+.long-cta {
+  display: inline-block;
+}
+
 .link-cta {
   border-bottom: 1px dotted var(--primary-orange);
   padding: 0.4rem 0;
@@ -413,6 +430,13 @@ footer {
     border-top: 1px solid var(--primary-orange);
     border-image: linear-gradient(to right, var(--primary-orange), transparent) 1;
     padding-top: 1rem;
+  }
+
+  .box-image {
+    width: 18rem;
+    border-radius: 1rem;
+    border: 2px solid var(--primary-orange);
+    margin: auto;
   }
 }
 
