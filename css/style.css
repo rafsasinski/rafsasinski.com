@@ -269,6 +269,13 @@ header {
   width: 25%;
 }
 
+.separator--white--long {
+  background: var(--muted-white);
+  margin: 1rem 0;
+  height: 2px;
+  width: 100%;
+}
+
 .profile-picture {
   aspect-ratio: 1;
   border: 5px solid var(--primary-orange);
@@ -277,6 +284,27 @@ header {
   width: 35vw;
   height: auto;
   max-width: 400px;
+}
+
+.logo-hero {
+  max-width: 400px;
+  max-height: 329px;
+}
+
+.project-specs {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 1rem 3rem;
+}
+
+.project-specs dt {
+  font-weight: 700;
+  color: white;
+}
+
+.project-specs dd {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.7);
 }
 
 /* ########## END: Hero / Welcome ########## */
@@ -358,6 +386,11 @@ footer {
 
 @media (max-width: 830px) {
   .profile-picture {
+    height: 25%;
+    width: 25%;
+  }
+
+  .logo-hero {
     height: 25%;
     width: 25%;
   }
