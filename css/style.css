@@ -152,7 +152,6 @@ section {
   background: var(--card-bg);
   border: 1px solid var(--card-border);
   border-radius: 1rem;
-  margin: auto;
   transition: border-color 0.5s ease, box-shadow 0.5s ease;
 }
 .box:hover {
@@ -271,6 +270,7 @@ header {
 
 .separator--white--long {
   background: var(--muted-white);
+  box-sizing: border-box;
   margin: 1rem 0;
   height: 2px;
   width: 100%;
@@ -294,7 +294,7 @@ header {
 .project-specs {
   display: grid;
   grid-template-columns: max-content 1fr;
-  gap: 1rem 3rem;
+  gap: 1rem;
 }
 
 .project-specs dt {
@@ -303,8 +303,40 @@ header {
 }
 
 .project-specs dd {
+  display: inline;
+  text-align: left;
   margin: 0;
   color: rgba(255, 255, 255, 0.7);
+}
+
+.conent-left {
+  text-align: left;
+}
+
+.description {
+  display: flex;
+  gap: 2rem;
+}
+
+.three-card li {
+  width: 30%;
+}
+
+.three-card h4 {
+  text-align: left;
+}
+
+.three-card p {
+  text-align: left;
+}
+
+.tags {
+  padding: 1rem;
+}
+
+.tags div {
+  display: flex;
+  justify-content: space-evenly;
 }
 
 /* ########## END: Hero / Welcome ########## */
@@ -369,7 +401,16 @@ footer {
 /* ########## END: Footer ########## */
 
 /* ########## START: Responsive ########## */
-@media (max-width: 1250px) {
+@media (max-width: 1200px) {
+  .description {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .description > .box {
+    max-width: 300px;
+  }
+
   .skills-break {
     display: list-item;
   }
@@ -384,7 +425,7 @@ footer {
   }
 }
 
-@media (max-width: 830px) {
+@media (max-width: 998px) {
   .profile-picture {
     height: 25%;
     width: 25%;
@@ -489,6 +530,16 @@ footer {
     display: none;
   }
 
+  .box {
+    width: auto;
+  }
+
+  .project-specs {
+    grid-template-columns: none;
+    grid-template-rows: max-content 1fr;
+    gap:0.5rem;
+  }
+
   .box-image {
     box-sizing: border-box;
     width: 100%;
@@ -499,6 +550,16 @@ footer {
 
   .box-text {
     width: 100%;
+  }
+
+  .three-card li {
+    width: auto;
+  }
+
+  .tags div {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
   }
 }
 
