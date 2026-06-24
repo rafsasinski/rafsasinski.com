@@ -355,12 +355,13 @@ li + .skills-list__item {
 .project-specs {
   display: grid;
   grid-template-columns: max-content 1fr;
-  gap: 1rem;
+  gap: 1rem 2rem;
 }
 
 .project-specs dt {
-  font-weight: 700;
   color: white;
+  font-weight: 700;
+  text-align: left;
 }
 
 .project-specs dd {
