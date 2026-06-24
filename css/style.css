@@ -330,7 +330,7 @@ li + .skills-list__item {
   height: 32px;
 }
 
-.skills-list__item{
+.skills-list__item {
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -371,27 +371,28 @@ li + .skills-list__item {
   color: rgba(255, 255, 255, 0.7);
 }
 
-.three-card ul {
+.feature-cards__list {
   display: flex;
   flex-direction: row;
   padding: 2rem;
   margin: 0;
 }
 
-.three-card li {
+.feature-cards__item {
   display: flex;
   flex: 1 1 auto;
+  margin: 0 1rem 0 0;
   min-width: 0;
   flex-direction: column;
   width: 100px;
 }
 
-.three-card h4 {
+.feature-cards__title {
   margin: 0.5rem 0;
   text-align: left;
 }
 
-.three-card p {
+.feature-cards__text {
   margin: 0.5rem 0;
   text-align: left;
 }
@@ -548,7 +549,6 @@ footer {
   /*li:after {*/
   /*  content: "|";*/
   /*}*/
-
   li + .skills-list__item {
     border-left: none;
     padding-left: 0;
@@ -588,20 +588,23 @@ footer {
     width: 100%;
   }
 
-  .three-card ul {
+  .feature-cards__list {
+    flex-direction: column;
+    font-size: 1.5rem;
     padding: 0 0 2rem 0;
   }
 
-  .three-card li {
+  .feature-cards__item {
+    margin: 1rem 2rem 0 2rem;
     width: auto;
   }
 
-  .three-card h4 {
+  .feature-cards__title {
     text-align: left;
     margin: 1rem 0 0 0;
   }
 
-  .three-card p {
+  .feature-cards__text {
     text-align: left;
     margin: 0;
   }
