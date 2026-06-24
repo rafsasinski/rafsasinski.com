@@ -90,10 +90,6 @@ a > p {
   color: var(--primary-white);
 }
 
-.lead-text {
-  font-size: 1.5rem;
-}
-
 .orange-text {
   color: var(--primary-orange);
 }
