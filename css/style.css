@@ -354,6 +354,18 @@ header {
   justify-content: space-evenly;
 }
 
+.tag {
+  border: 1px solid var(--glow);
+  color: var(--muted-white);
+  padding: 0.4rem 1.2rem;
+  border-radius: 999px;
+}
+
+.tag::before {
+  content: "#";
+}
+
+
 /* ########## END: Hero / Welcome ########## */
 
 /* ########## START: Components ########## */
