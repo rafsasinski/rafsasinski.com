@@ -90,29 +90,6 @@ a > p {
   color: var(--primary-white);
 }
 
-ul {
-  list-style-type: none;
-  /* NEW class? */
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem 0;
-  padding: 1rem;
-}
-
-li {
-  margin: 0 1rem 0 0;
-}
-
-/*li:after {*/
-/*  content: "|";*/
-/*}*/
-
-li + .skills-item {
-  border-left: 1px solid var(--primary-orange);
-  padding-left: 1rem;
-}
-
 .lead-text {
   font-size: 1.5rem;
 }
@@ -146,56 +123,14 @@ section {
   gap: 2rem;
 }
 
-.box {
-  background: var(--card-bg);
-  border: 1px solid var(--card-border);
-  border-radius: 1rem;
-  transition: border-color 0.5s ease, box-shadow 0.5s ease;
-}
-
-.box:hover {
-  border: 1px solid var(--primary-orange);
-  box-shadow: 0 0 18px var(--glow);
-}
-
-.box--padding {
-  padding: 2rem;
-}
-
-.box-image {
-  width: 25rem;
-  border-radius: 1rem;
-  border: 1px solid var(--primary-orange);
-  margin: auto;
-}
-
-.box-text {
-  text-align: left;
-  width: 25rem;
-}
-
-.skills-icon {
-  height: 32px;
-}
-
-.skills-item {
+.description {
   display: flex;
-  align-items: center;
-  gap: 0.5rem;
+  gap: 2rem;
 }
 
-.skills-break {
-  display: none;
-  flex-basis: 100%;
-  height: 0;
-  margin: 0;
-  padding: 0;
-  border: 0;
+.content-left {
+  text-align: left;
 }
-
-/*.hidden {*/
-/*  display: none;*/
-/*}*/
 
 /* ########## END: Layout ##########  */
 
@@ -260,21 +195,6 @@ header {
   justify-content: flex-start;
 }
 
-.separator {
-  background: var(--primary-orange);
-  margin: 1rem 0;
-  height: 2px;
-  width: 25%;
-}
-
-.separator--white--long {
-  background: var(--muted-white);
-  box-sizing: border-box;
-  margin: 1rem 0;
-  height: 2px;
-  width: 100%;
-}
-
 .profile-picture {
   aspect-ratio: 1;
   border: 5px solid var(--primary-orange);
@@ -289,79 +209,6 @@ header {
   max-width: 400px;
   max-height: 329px;
 }
-
-.project-specs {
-  display: grid;
-  grid-template-columns: max-content 1fr;
-  gap: 1rem;
-}
-
-.project-specs dt {
-  font-weight: 700;
-  color: white;
-}
-
-.project-specs dd {
-  display: inline;
-  text-align: left;
-  margin: 0;
-  color: rgba(255, 255, 255, 0.7);
-}
-
-.conent-left {
-  text-align: left;
-}
-
-.description {
-  display: flex;
-  gap: 2rem;
-}
-
-.three-card ul {
-  display: flex;
-  flex-direction: row;
-  padding: 2rem;
-  margin: 0;
-}
-
-.three-card li {
-  display: flex;
-  flex: 1 1 auto;
-  min-width: 0;
-  flex-direction: column;
-  width: 100px;
-}
-
-.three-card h4 {
-  margin: 0.5rem 0;
-  text-align: left;
-}
-
-.three-card p {
-  margin: 0.5rem 0;
-  text-align: left;
-}
-
-.tags {
-  padding: 1rem;
-}
-
-.tags div {
-  display: flex;
-  justify-content: space-evenly;
-}
-
-.tag {
-  border: 1px solid var(--glow);
-  color: var(--muted-white);
-  padding: 0.4rem 1.2rem;
-  border-radius: 999px;
-}
-
-.tag::before {
-  content: "#";
-}
-
 
 /* ########## END: Hero / Welcome ########## */
 
@@ -411,7 +258,165 @@ nav {
   float: right;
 }
 
+.box {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 1rem;
+  transition: border-color 0.5s ease, box-shadow 0.5s ease;
+}
+
+.box:hover {
+  border: 1px solid var(--primary-orange);
+  box-shadow: 0 0 18px var(--glow);
+}
+
+.box--padding {
+  padding: 2rem;
+}
+
+.box-image {
+  width: 25rem;
+  border-radius: 1rem;
+  border: 1px solid var(--primary-orange);
+  margin: auto;
+}
+
+.box-text {
+  text-align: left;
+  width: 25rem;
+}
+
+.separator {
+  background: var(--primary-orange);
+  margin: 1rem 0;
+  height: 2px;
+  width: 25%;
+}
+
+.separator--white--long {
+  background: var(--muted-white);
+  box-sizing: border-box;
+  margin: 1rem 0;
+  height: 2px;
+  width: 100%;
+}
+
 /* ########## END: Components ########## */
+
+/* ########## START: Skills / Lists ########## */
+ul {
+  list-style-type: none;
+  /* NEW class? */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem 0;
+  padding: 1rem;
+}
+
+li {
+  margin: 0 1rem 0 0;
+}
+
+/*li:after {*/
+/*  content: "|";*/
+/*}*/
+
+li + .skills-item {
+  border-left: 1px solid var(--primary-orange);
+  padding-left: 1rem;
+}
+
+.skills-icon {
+  height: 32px;
+}
+
+.skills-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.skills-break {
+  display: none;
+  flex-basis: 100%;
+  height: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/*.hidden {*/
+/*  display: none;*/
+/*}*/
+
+/* ########## END: Skills / Lists ########## */
+
+/* ########## START: Project / Case Study ########## */
+.project-specs {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 1rem;
+}
+
+.project-specs dt {
+  font-weight: 700;
+  color: white;
+}
+
+.project-specs dd {
+  display: inline;
+  text-align: left;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.three-card ul {
+  display: flex;
+  flex-direction: row;
+  padding: 2rem;
+  margin: 0;
+}
+
+.three-card li {
+  display: flex;
+  flex: 1 1 auto;
+  min-width: 0;
+  flex-direction: column;
+  width: 100px;
+}
+
+.three-card h4 {
+  margin: 0.5rem 0;
+  text-align: left;
+}
+
+.three-card p {
+  margin: 0.5rem 0;
+  text-align: left;
+}
+
+.tags {
+  padding: 1rem;
+}
+
+.tags div {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.tag {
+  border: 1px solid var(--glow);
+  color: var(--muted-white);
+  padding: 0.4rem 1.2rem;
+  border-radius: 999px;
+}
+
+.tag::before {
+  content: "#";
+}
+
+/* ########## END: Project / Case Study ########## */
 
 /* ########## START: Footer ########## */
 footer {
@@ -612,15 +617,17 @@ footer {
 /*
 ########## CSS SECTIONS ##########
 
-1. Fonts & Tokens
-2. Base / Reset
-3. Typography / Text
-4. Layout
-5. Header & Brand
-6. Hero / Welcome
-7. Components
-8. Footer
-9. Responsive
+ 1. Fonts & Tokens
+ 2. Base / Reset
+ 3. Typography / Text
+ 4. Layout
+ 5. Header & Brand
+ 6. Hero / Welcome
+ 7. Components
+ 8. Skills / Lists
+ 9. Project / Case Study
+10. Footer
+11. Responsive
 
 ##################################
 */
