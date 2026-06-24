@@ -155,6 +155,7 @@ section {
   border-radius: 1rem;
   transition: border-color 0.5s ease, box-shadow 0.5s ease;
 }
+
 .box:hover {
   border: 1px solid var(--primary-orange);
   box-shadow: 0 0 18px var(--glow);
@@ -249,7 +250,7 @@ header {
   display: flex;
   flex-direction: row;
   gap: 0.5rem;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 .welcome-msg {
@@ -319,15 +320,28 @@ header {
   gap: 2rem;
 }
 
+.three-card ul {
+  display: flex;
+  flex-direction: row;
+  padding: 2rem;
+  margin: 0;
+}
+
 .three-card li {
-  width: 30%;
+  display: flex;
+  flex: 1 1 auto;
+  min-width: 0;
+  flex-direction: column;
+  width: 100px;
 }
 
 .three-card h4 {
+  margin: 0.5rem 0;
   text-align: left;
 }
 
 .three-card p {
+  margin: 0.5rem 0;
   text-align: left;
 }
 
@@ -387,6 +401,7 @@ nav {
   box-sizing: border-box;
   float: right;
 }
+
 /* ########## END: Components ########## */
 
 /* ########## START: Footer ########## */
@@ -538,7 +553,11 @@ footer {
   .project-specs {
     grid-template-columns: none;
     grid-template-rows: max-content 1fr;
-    gap:0.5rem;
+    gap: 0.5rem;
+  }
+  .project-specs dt {
+    text-align: left;
+    margin: 1rem 0 0 0;
   }
 
   .box-image {
@@ -555,6 +574,16 @@ footer {
 
   .three-card li {
     width: auto;
+  }
+
+  .three-card h4 {
+    text-align: left;
+    margin: 1rem 0 0 0;
+  }
+
+  .three-card p {
+    text-align: left;
+    margin: 0;
   }
 
   .tags div {
