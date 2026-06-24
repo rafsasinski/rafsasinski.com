@@ -213,7 +213,7 @@ header {
 /* ########## END: Hero / Welcome ########## */
 
 /* ########## START: Components ########## */
-nav {
+.site-nav {
   align-items: center;
   display: flex;
   flex-wrap: wrap;
@@ -467,7 +467,7 @@ footer {
 }
 
 @media (max-width: 768px) {
-  nav {
+  .site-nav {
     align-items: center;
     flex-direction: column;
     gap: 0.1rem;
