@@ -304,9 +304,8 @@ nav {
 /* ########## END: Components ########## */
 
 /* ########## START: Skills / Lists ########## */
-ul {
+.skills-list {
   list-style-type: none;
-  /* NEW class? */
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -314,7 +313,7 @@ ul {
   padding: 1rem;
 }
 
-li {
+.skills-list__item {
   margin: 0 1rem 0 0;
 }
 
@@ -322,22 +321,22 @@ li {
 /*  content: "|";*/
 /*}*/
 
-li + .skills-item {
+li + .skills-list__item {
   border-left: 1px solid var(--primary-orange);
   padding-left: 1rem;
 }
 
-.skills-icon {
+.skills-list__icon {
   height: 32px;
 }
 
-.skills-item {
+.skills-list__item{
   display: flex;
   align-items: center;
   gap: 0.5rem;
 }
 
-.skills-break {
+.skills-list__break {
   display: none;
   flex-basis: 100%;
   height: 0;
@@ -441,15 +440,15 @@ footer {
     max-width: 300px;
   }
 
-  .skills-break {
+  .skills-list__break {
     display: list-item;
   }
 
-  li + .skills-item {
+  li + .skills-list__item {
     border: none;
   }
 
-  .skills-item + li {
+  .skills-list__item + li {
     border-left: 1px solid var(--primary-orange);
     padding-left: 1rem;
   }
@@ -535,20 +534,21 @@ footer {
     width: 100%;
   }
 
-  ul {
+  .skills-list {
     flex-direction: column;
     font-size: 1.5rem;
     padding: 0;
   }
 
-  li {
+  .skills-list__item {
     margin: 1rem 2rem 0 2rem;
   }
 
   /*li:after {*/
   /*  content: "|";*/
   /*}*/
-  li + .skills-item {
+
+  li + .skills-list__item {
     border-left: none;
     padding-left: 0;
     border-top: 1px solid var(--primary-orange);
@@ -556,7 +556,7 @@ footer {
     padding-top: 1rem;
   }
 
-  .skills-break {
+  .skills-list__break {
     display: none;
   }
 
