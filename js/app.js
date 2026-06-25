@@ -1,4 +1,4 @@
-(function (global) {
+const _sph = (function (global) {
   'use strict';
 
   global.document.addEventListener("mousemove", (e) => {
@@ -40,5 +40,20 @@
       element.innerText = message;
     });
   }
+
+  function toggleMenu() {
+    const nav = document.getElementById("menu-navigation");
+    const navClassList = Array.from(nav.classList);
+
+    if (navClassList.includes('site-nav__open')) {
+      nav.classList.remove('site-nav__open');
+    } else {
+      nav.classList.add('site-nav__open');
+    }
+  }
+
+  return {
+    toggleMenu
+  };
 
 }(window));

@@ -212,11 +212,18 @@ header {
 .site-nav {
   align-items: center;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: row;
   gap: 1.5rem;
   justify-content: flex-end;
-  margin-right: 2rem;
   width: 90%;
+}
+
+.brand-container {
+  margin: auto;
+}
+
+.sph-burger {
+  display: none;
 }
 
 .nav-cta {
@@ -459,11 +466,33 @@ footer {
 
 @media (max-width: 768px) {
   .site-nav {
-    align-items: center;
+    display: none;
     flex-direction: column;
     gap: 0.1rem;
     margin: 1rem auto;
     width: 100%;
+  }
+
+  .brand-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1rem;
+    margin: 0;
+  }
+
+  .site-nav__open {
+    display: flex;
+  }
+
+  .sph-burger {
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+
+    background-color: currentColor;
+
+    -webkit-mask: url("/img/spharce-burger-menu.svg") center / contain no-repeat;
+    mask: url("/img/spharce-burger-menu.svg") center / contain no-repeat;
   }
 
   .welcome-msg nav {
@@ -600,6 +629,7 @@ footer {
     flex-direction: column;
     gap: 1rem;
   }
+
 }
 
 /* ########## END: Responsive ########## */
@@ -621,3 +651,4 @@ footer {
 
 ##################################
 */
+
